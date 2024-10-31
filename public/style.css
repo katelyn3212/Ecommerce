@@ -1,0 +1,166 @@
+/* Basic reset for body */
+body {
+    margin: 0;
+    font-family: 'Lobster', cursive;
+}
+
+/* ----NAVIGATION BAR STYLE---- */
+
+/* Style for navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /*displays the right side and left side with space*/
+    padding: 10px 20px;
+    background-color: #F8F6F0;
+    height: auto;
+}
+
+/* Left side (logo image, logo text, and search bar) */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    /*stacks the logo img, logo txt, and search bar vertically*/
+}
+
+/* Right side (Shop, Orders, Cart icon) */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    /*stacks the sign in button and nav links vertically*/
+    align-items: end;
+    /* Align items so the sign in button and nav links are aligned to the right */
+    gap: 35px;
+    /* Space between links */
+}
+
+.logo-img img {
+    width: 40px;
+    height: auto;
+}
+
+.logo {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Search bar style */
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    width: 250px;
+}
+
+/* Search button style*/
+.search-bar button {
+    margin-left: 5px;
+}
+
+/* Sign In button styling */
+.sign-in-button {
+    background-color: gray;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.cart-icon {
+    font-size: 24px;
+}
+
+/* ----ADMIN PANEL STYLE---- */
+.dashboard {
+    margin-left:3%;
+    margin-right:3%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.dashboard-item {
+    margin-top:10%;
+    margin-bottom:10%;
+    padding-top: 5%; 
+    padding-bottom: 5%;
+    padding-right:1.5%;
+    padding-left: 1.5%;
+    background-color: rgb(55, 52, 87);
+
+}
+.dashboard-item a {
+    text-decoration: none;
+    color: rgb(188, 187, 207);
+    font-size: 20px;
+}
+
+/* ----BODY---- */
+
+/* Style for the content after the nav bar */
+#product-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Responsive column sizing */
+    gap: 20px;
+    padding: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+}
+
+.item {
+    text-align: center;
+}
+
+.admin-content {
+    text-align: center;
+}
+
+.admin-control {
+    text-align: center;
+    display: flex;
+    justify-content: center;  /* Horizontally centers the table */
+    align-items: center; /* Vertically centers the table*/
+}
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 3px;
+  }
+
+#product-details {
+    color: black;
+    display: flex;
+    flex-direction: column;    /* Stack items vertically */
+    text-align: center;
+    align-items: center;
+}
+
+#product-details img {
+    width: 225px;
+    height: 225px;
+}
+
+#product-details p {
+    margin: 5px;
+}

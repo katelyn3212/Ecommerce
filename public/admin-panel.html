@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADMIN-dashboard">
+    <title>ADMIN-dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <div class="left-side">
+            <div class="logo-img"><img src="https://via.placeholder.com/40" alt="logo image"></div>
+            <div class="logo">MyLogo</div>
+            <div class="search-bar"><input type="text" placeholder="Search for products..."><button>Search</button>
+            </div>
+        </div>
+        <div class="right-side">
+            <a href="#" class="sign-in-button">Sign In</a> <!-- Sign In button -->
+            <div class="nav-links">
+                <a href="#">Shop</a> <!-- Redirect to HOMEPAGE -->
+                <a href="#">Orders</a> <!-- Redirect to order history if verified user; sign in page if guest -->
+                <a href="#">&#128722;</a> <!-- Redirect to shopping cart -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Admin Dashboard -->
+    <div class="navbar">
+        <a href="admin-panel.html">Admin Control Panel</a>
+        <a href="add-product.html">Add Product</a>
+        <a href="remove-product.html">Remove Product</a>
+        <a href="update-product.html">Update Product Details</a>
+        <a href="#">Order History</a>
+    </div>
+
+    <!--Actual content-->
+
+    <div class="dashboard">
+        <div class="dashboard-item">
+            <a href="index.html">View Products</a>
+        </div>
+        <div class="dashboard-item">
+            <a href="add-product.html">Add New Product</a>
+        </div>
+        <div class="dashboard-item">
+            <a href="update-product.html">Update Product</a>
+        </div>
+        <div class="dashboard-item">
+            <a href="remove-product.html">Remove Product</a>
+        </div>
+        <div class="dashboard-item">
+            <a href="#">Manage Orders</a>
+        </div>
+    </div>
+</body>
+
+</html>

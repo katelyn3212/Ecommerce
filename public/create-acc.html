@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HOME">
+    <title>HOMEPAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <div class="left-side">
+            <div class="logo-img"><img src="https://via.placeholder.com/40" alt="logo image"></div>
+            <div class="logo">MyLogo</div>
+            <div class="search-bar"><input type="text" placeholder="Search for products..."><button>Search</button>
+            </div>
+        </div>
+        <div class="right-side">
+            <a href="#" class="sign-in-button">Sign In</a> <!-- Sign In button -->
+            <div class="nav-links">
+                <a href="#">Shop</a> <!-- Redirect to HOMEPAGE -->
+                <a href="#">Orders</a> <!-- Redirect to order history if verified user; sign in page if guest -->
+                <a href="#">&#128722;</a> <!-- Redirect to shopping cart -->
+            </div>
+        </div>
+    </div>
+
+    <div id="create-acc-div">
+        <h2>Create New Account</h2>
+        <form id="createAccountForm">
+            <h5>Personal Info</h5>
+
+            <label for="fName">First Name: </label><br>
+            <input type="text" id="fName" required><br>
+
+            <label for="lName">Last Name: </label><br>
+            <input type="text" id="lName" required><br>
+
+            <label for="phoneNum">Phone Number:</label><br>
+            <input type="number" id="phoneNum"  maxlength="10"><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="text" id="email" required><br>
+
+            <label for="pswd">Create Password:</label><br>
+            <input type="password" id="pswd" required><br>
+
+            <label for="pswd">Reenter Password:</label><br>
+            <input type="password" id="pswd" required><br>
+
+            <h5>Address Info</h5>
+
+            <label for="addrline1">Address Line 1: </label><br>
+            <input type="text" id="addrline1" required><br>
+
+            <label for="addrline2">Address Line 2: </label><br>
+            <input type="text" id="addrline2" required><br>
+
+            <label for="city">City: </label><br>
+            <input type="text" id="city" required><br>
+
+            <label for="state">State: </label><br>
+            <input type="text" id="state" required><br>
+
+            <label for="zipcode">Zip Code: </label><br>
+            <input type="number" id="zipcode" required><br>
+
+            <br>
+            <button id="submitAccountBtn">CREATE ACCOUNT</button><br>
+            <br>
+        </form>
+    </div>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADMIN-remove">
+    <title>ADMIN-remove</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/logic/logic.js"></script>
+    <script src="/logic/search_products.js"></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <div class="left-side">
+            <div class="logo-img"><img src="https://via.placeholder.com/40" alt="logo image"></div>
+            <div class="logo">MyLogo</div>
+            <div class="search-bar"><input type="text" placeholder="Search for products..."><button>Search</button>
+            </div>
+        </div>
+        <div class="right-side">
+            <a href="#" class="sign-in-button">Sign In</a> <!-- Sign In button -->
+            <div class="nav-links">
+                <a href="#">Shop</a> <!-- Redirect to HOMEPAGE -->
+                <a href="#">Orders</a> <!-- Redirect to order history if verified user; sign in page if guest -->
+                <a href="#">&#128722;</a> <!-- Redirect to shopping cart -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Admin Dashboard -->
+    <div class="navbar">
+        <a href="admin-panel.html">Admin Control Panel</a>
+        <a href="add-product.html">Add Product</a>
+        <a href="remove-product.html">Remove Product</a>
+        <a href="update-product.html">Update Product Details</a>
+        <a href="#">Order History</a>
+    </div>
+
+    <!--Actual content-->
+    <div class="admin-content">
+        <h2><u>Remove Product</u></h2>
+        <div class="admin-control">
+            <form id="removeProductForm"> <!-- Prevent default form submission -->
+                <label for="productSearch">Search Product:</label>
+                <input type="text" id="productSearch" placeholder="Search by product name or description">
+                <button id="searchProductBtn">Search</button><br><br>
+                <table id="search-before-remove">
+                </table>
+                <br>
+                <label for="removeId">Enter ID of item to be removed: </label>
+                <input type="number" id="removeId" required><br><br>
+                <button id="removeProductBtn" type="submit">REMOVE PRODUCT</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Event listener for searching products
+        document.getElementById('searchProductBtn').addEventListener('click', async (event) => {
+            event.preventDefault(); // Prevent page from refreshing
+            const searchTerm = document.getElementById('productSearch').value;
+            const tableName = "search-before-remove";
+            await fetchAndDisplaySearchProducts(searchTerm, tableName); // Fetch products based on search term
+        });
+
+        // Event listener for removing products
+        document.getElementById('removeProductBtn').addEventListener('click', async () => {
+            event.preventDefault(); // Prevent page from refreshing
+            await removeProduct("removeProductForm", "http://localhost:3000/admin/remove");
+        });
+    </script>
+</body>
+
+</html>
